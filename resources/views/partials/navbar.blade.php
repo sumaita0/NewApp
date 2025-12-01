@@ -2,11 +2,11 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <!-- Navbar -->
-<nav id="navbar" class="bg-white fixed w-full  top-0 left-0 z-40 shadow transition-all duration-300 pt-14">
+<nav id="navbar" class="bg-white fixed w-full  top-0 left-0 z-40 shadow transition-all duration-300 pt-10">
   <div class="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-2 sm:px-4 md:px-12 lg:px-44 space-y-2 md:space-y-0 relative">
 
     <!-- Logo -->
-    <a href="#" class="flex items-center">
+    <a href="/" class="flex items-center">
       <img src="images/logo.png" alt="Logo" class="h-10 w-auto">
     </a>
 
@@ -17,7 +17,7 @@
 
       <!-- Home Dropdown -->
       <li class="group relative">
-        <a href="#" class="py-2 px-3 bg-[#1193d4] hover:text-white hover:bg-[#1193d4] border rounded border-nonefont-semibold">Home</a>
+        <a href="/" class="py-2 px-3 bg-[#1193d4] hover:text-white hover:bg-[#1193d4] border rounded border-nonefont-semibold">Home</a>
         <ul class="absolute top-full left-0 mt-2 bg-white border-none border rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity pointer-events-none group-hover:pointer-events-auto z-50">
           <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Home Boxed</a></li>
         </ul>
@@ -27,7 +27,7 @@
       <li class="group relative">
         <a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Pages</a>
         <ul class="absolute top-full left-0 mt-2 bg-white border-none rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50">
-          <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">About</a></li>
+          <li><a href="/about" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">About</a></li>
           <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Services</a></li>
           <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Team</a></li>
           <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Jobs</a></li>
@@ -37,8 +37,8 @@
       </li>
 
       <!-- Single Items -->
-      <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">About</a></li>
-      <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Services</a></li>
+      <li><a href="/about" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">About</a></li>
+      <li><a href="/services" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Services</a></li>
       <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Team</a></li>
       <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Jobs</a></li>
       <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Blog</a></li>

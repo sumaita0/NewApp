@@ -86,10 +86,20 @@
     </div>
   </div>
 
-  <!-- View Portfolio Button -->
-  <div class="text-center mt-12">
-    <a href="/portfolio" class="inline-block px-8 py-3 bg-[#1193d4] text-white font-semibold rounded hover:bg-[#0e7ac1] transition">
-      View Full Portfolio
-    </a>
-  </div>
+ <!-- View Portfolio Button with Arrow Box Matching Height -->
+<div class="text-center mt-12">
+  <a href="/portfolio" class="inline-flex items-stretch bg-[#1193d4] text-white font-semibold rounded hover:bg-black transition">
+    <!-- Text part -->
+    <span class="px-6 py-2 flex items-center">View Full Portfolio</span>
+    
+    <!-- Arrow box -->
+    <span class="flex items-center justify-center w-12 bg-black  hover:bg-[#1193d4]">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 text-white">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </span>
+  </a>
+</div>
+
+
 </section>
