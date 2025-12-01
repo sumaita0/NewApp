@@ -1,4 +1,4 @@
-<section class="py-16 bg-[#1193d4]">
+<section class="py-10 px-12 lg:px-44 bg-[#1193d4]">
   <div class="container mx-auto grid grid-cols-1 sm:grid-cols-4 text-center divide-x divide-white/30">
     
     <!-- Satisfied Clients -->

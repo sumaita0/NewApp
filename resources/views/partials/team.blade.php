@@ -2,7 +2,7 @@
   <div class="container mx-auto px-2 sm:px-4 md:px-12 lg:px-44">
     <h2 class="text-4xl font-bold text-center mb-12">Our Team</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
 
       <!-- Team Member 1 -->
       <div class="bg-[rgb(244,240,240)]  p-6 text-center">
