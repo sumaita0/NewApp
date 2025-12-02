@@ -5,8 +5,8 @@
 />
 
 <section class="py-16 bg-gray-100">
-  <div class="container mx-auto px-2 sm:px-4 md:px-12 lg:px-44">
-    <h2 class="text-3xl font-bold mb-8 text-center">Our Amazing Clients</h2>
+  <div class="container mx-auto px-2 sm:px-4 md:px-12 lg:px-44 ">
+    <h2 class="text-3xl font-monospace mb-8 text-center">Our Amazing Clients</h2>
     <p class="text-center text-gray-600 mb-12">
       We trust in longlasting partnerships with the most important brands on the market
     </p>

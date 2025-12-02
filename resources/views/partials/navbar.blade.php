@@ -17,7 +17,7 @@
 
       <!-- Home Dropdown -->
       <li class="group relative">
-        <a href="/" class="py-2 px-3 bg-[#1193d4] hover:text-white hover:bg-[#1193d4] border rounded border-nonefont-semibold">Home</a>
+        <a href="/" class="py-2 px-3 bg-white hover:text-white hover:bg-[#1193d4] border-none font-semibold">Home</a>
         <ul class="absolute top-full left-0 mt-2 bg-white border-none border rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity pointer-events-none group-hover:pointer-events-auto z-50">
           <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Home Boxed</a></li>
         </ul>

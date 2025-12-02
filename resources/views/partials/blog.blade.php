@@ -4,6 +4,16 @@
   href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
 />
 
+<style>
+  /* Make pagination dots appear below the slider */
+  .swiper-pagination {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 20px;
+    text-align: center;
+  }
+</style>
+
 <section class="py-12 px-2 sm:px-4 md:px-12 lg:px-44 bg-gray-100">
   <div class="container mx-auto">
     <h2 class="text-3xl font-monospace mb-8 text-center">Latest from the Blog</h2>
@@ -68,11 +78,11 @@
         </div>
 
       </div>
-
-      <!-- Pagination (moved further down) -->
-      <div class="swiper-pagination bottom-16"></div>
-
     </div>
+
+    <!-- Pagination BELOW slider -->
+    <div class="swiper-pagination"></div>
+
   </div>
 </section>
 
@@ -92,10 +102,6 @@
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
     },
     breakpoints: {
       640: { slidesPerView: 1, slidesPerGroup: 1 },

@@ -8,7 +8,7 @@
 
     <!-- Service 1 -->
     <div 
-      class="bg-white p-8 sm:p-10 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer"
+      class="bg-[rgb(244,240,240)] p-8 sm:p-10 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer"
       onclick="openModal(
         'Service One', 
         `Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam. 
@@ -27,7 +27,7 @@
 
     <!-- Service 2 -->
     <div 
-      class="bg-white p-8 sm:p-10 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer"
+      class="bg-[rgb(244,240,240)] p-8 sm:p-10 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer"
       onclick="openModal(
         'Service Two', 
         `Etiam sit amet lectus quis est congue mollis. Phasellus congue lacus eget neque. 
@@ -45,7 +45,7 @@
 
     <!-- Service 3 -->
     <div 
-      class="bg-white p-8 sm:p-10 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer"
+      class="bg-[rgb(244,240,240)] p-8 sm:p-10 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer"
       onclick="openModal(
         'Service Three', 
         `Praesent sodales velit quis augue. Cras suscipit, urna at aliquam. 
