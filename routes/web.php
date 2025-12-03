@@ -23,6 +23,10 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-route::get('/services', function () {
+Route::get('/services', function () {
     return view('services');
 })->name('services');
+
+Route::get('/team', function () {
+    return view('teamPage');
+})->name('team');

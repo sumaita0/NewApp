@@ -72,8 +72,10 @@
   <div class="container mx-auto px-12 lg:px-44  flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
 
     <!-- Left -->
-    <div class="mb-2 md:mb-0 text-center md:text-left font-monospaced text-white">
-      © All Rights Reserved IOD
+    <div class="mb-2 md:mb-0 text-center md:text-left font-bold text-white">
+      <p>
+      © All Rights Reserved <span style="color:#1193d4;">IOD</span>
+      </p>
     </div>
 
     <!-- Right -->

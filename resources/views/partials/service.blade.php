@@ -1,5 +1,5 @@
 <!-- Services Section -->
-<section id="services" class="py-16 bg-gray-50 px-4 md:px-12 lg:px-44">
+<section id="services" class="py-16 bg-gray-50 px-4 md:px-12 lg:px-44 pb-16">
   <div class="text-center mb-10">
     <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold">Our Services</h2>
   </div>
@@ -48,6 +48,60 @@
       class="bg-[rgb(244,240,240)] p-8 sm:p-10 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer"
       onclick="openModal(
         'Service Three', 
+        `Praesent sodales velit quis augue. Cras suscipit, urna at aliquam. 
+        Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus.`
+      )"
+    >
+      <div class="mb-4">
+        <img src="/images/data-analytics.png" class="h-12 w-12 service-icon transition" alt="Data Analytics">
+      </div>
+      <h3 class="text-xl sm:text-2xl font-bold mb-2 text-black group-hover:text-white transition">Service Three</h3>
+      <p class="text-gray-800 group-hover:text-white transition mb-4">
+        Innovative strategies to help you stay ahead of the competition in a fast-changing market.
+      </p>
+    </div>
+
+    <!-- Service 4 -->
+    <div 
+      class="bg-[rgb(244,240,240)] p-8 sm:p-10 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer"
+      onclick="openModal(
+        'Service Four', 
+        `Praesent sodales velit quis augue. Cras suscipit, urna at aliquam. 
+        Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus.`
+      )"
+    >
+      <div class="mb-4">
+        <img src="/images/data-analytics.png" class="h-12 w-12 service-icon transition" alt="Data Analytics">
+      </div>
+      <h3 class="text-xl sm:text-2xl font-bold mb-2 text-black group-hover:text-white transition">Service Three</h3>
+      <p class="text-gray-800 group-hover:text-white transition mb-4">
+        Innovative strategies to help you stay ahead of the competition in a fast-changing market.
+      </p>
+    </div>
+
+    <!-- Service 5 -->
+    <div 
+      class="bg-[rgb(244,240,240)] p-8 sm:p-10 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer"
+      onclick="openModal(
+        'Service Five', 
+        `Praesent sodales velit quis augue. Cras suscipit, urna at aliquam. 
+        Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus.`
+      )"
+    >
+      <div class="mb-4">
+        <img src="/images/data-analytics.png" class="h-12 w-12 service-icon transition" alt="Data Analytics">
+      </div>
+      <h3 class="text-xl sm:text-2xl font-bold mb-2 text-black group-hover:text-white transition">Service Three</h3>
+      <p class="text-gray-800 group-hover:text-white transition mb-4">
+        Innovative strategies to help you stay ahead of the competition in a fast-changing market.
+      </p>
+    </div>
+
+    <!-- Service 6 -->
+    <div 
+      class="bg-[rgb(244,240,240)] p-8 sm:p-10 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer"
+      onclick="openModal(
+        'Service Six', 
         `Praesent sodales velit quis augue. Cras suscipit, urna at aliquam. 
         Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus.`
       )"

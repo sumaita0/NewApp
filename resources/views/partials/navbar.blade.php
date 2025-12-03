@@ -2,55 +2,61 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <!-- Navbar -->
-<nav id="navbar" class="bg-white fixed w-full  top-0 left-0 z-40 shadow transition-all duration-300 pt-10">
+<nav id="navbar" class="bg-white fixed w-full top-0 left-0 z-40 shadow transition-all duration-300 pt-10">
   <div class="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-2 sm:px-4 md:px-12 lg:px-44 space-y-2 md:space-y-0 relative">
 
     <!-- Logo -->
     <a href="/" class="flex items-center">
-      <img src="images/logo.png" alt="Logo" class="h-10 w-auto">
+      <img src="images/logo.png" alt="Logo" class="h-10 w-auto ">
     </a>
-
-   
 
     <!-- Desktop Menu -->
     <ul class="hidden md:flex space-x-2 items-center">
 
       <!-- Home Dropdown -->
       <li class="group relative">
-        <a href="/" class="py-2 px-3 bg-white hover:text-white hover:bg-[#1193d4] border-none font-semibold">Home</a>
-        <ul class="absolute top-full left-0 mt-2 bg-white border-none border rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity pointer-events-none group-hover:pointer-events-auto z-50">
-          <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Home Boxed</a></li>
+        <a href="/" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-semibold">Home</a>
+        <!-- Dropdown menu -->
+        <!-- Dropdown menu -->
+        <ul class="absolute top-full left-0 mt-2 bg-gray-700 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 w-48">
+          <!-- Arrow pointing up -->
+          <div class="absolute top-0 left-4 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-gray-700"></div>        
+          <li><a href="#" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Home Boxed</a></li>
         </ul>
       </li>
 
       <!-- Pages Dropdown -->
       <li class="group relative">
-        <a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Pages</a>
-        <ul class="absolute top-full left-0 mt-2 bg-white border-none rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50">
-          <li><a href="/about" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">About</a></li>
-          <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Services</a></li>
-          <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Team</a></li>
-          <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Jobs</a></li>
-          <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Blog</a></li>
-          <li><a href="#" class="block px-14 py-2 text-white bg-gray-700 hover:bg-[#1193d4]  text-nowrap text-centered ">Contact</a></li>
+        <a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-semibold">Pages</a>
+        <!-- Dropdown menu -->
+        <ul class="absolute top-full left-0 mt-2 bg-gray-700 rounded shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 w-48">
+          <!-- Arrow pointing up -->
+          <div class="absolute top-0 left-4 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-gray-700"></div>
+          <!-- Menu items -->
+          <li><a href="/about" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">About</a></li>
+          <li><a href="/services" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Services</a></li>
+          <li><a href="/team" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Team</a></li>
+          <li><a href="#" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Jobs</a></li>
+          <li><a href="#" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Blog</a></li>
+          <li><a href="#" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Contact</a></li>
         </ul>
       </li>
 
       <!-- Single Items -->
       <li><a href="/about" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">About</a></li>
       <li><a href="/services" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Services</a></li>
-      <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Team</a></li>
+      <li><a href="/team" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Team</a></li>
       <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Jobs</a></li>
       <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Blog</a></li>
       <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Contact</a></li>
       <li>
-  <a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold flex items-center">
-    <!-- Search Icon -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
-    </svg>
-  </a>
-</li>
+        <a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold flex items-center">
+          <!-- Search Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+          </svg>
+        </a>
+      </li>
 
     </ul>
 
@@ -70,16 +76,22 @@
 
         <!-- Home Dropdown Mobile -->
         <li class="flex flex-col">
-          <span class="font-semibold">Home</span>
-          <ul class="ml-4 mt-1 space-y-1">
+          <button class="font-semibold flex justify-between items-center w-full" onclick="toggleSubMenu('home-sub')">
+            Home
+            <span class="transform transition-transform duration-300" id="home-arrow">▼</span>
+          </button>
+          <ul id="home-sub" class="ml-4 mt-1 space-y-1 hidden">
             <li><a href="#" class="block w-full py-1">Home Boxed</a></li>
           </ul>
         </li>
 
         <!-- Pages Dropdown Mobile -->
         <li class="flex flex-col">
-          <span class="font-semibold">Pages</span>
-          <ul class="ml-4 mt-1 space-y-1">
+          <button class="font-semibold flex justify-between items-center w-full" onclick="toggleSubMenu('pages-sub')">
+            Pages
+            <span class="transform transition-transform duration-300" id="pages-arrow">▼</span>
+          </button>
+          <ul id="pages-sub" class="ml-4 mt-1 space-y-1 hidden">
             <li><a href="#" class="block py-1">About</a></li>
             <li><a href="#" class="block py-1">Services</a></li>
             <li><a href="#" class="block py-1">Team</a></li>
@@ -88,14 +100,6 @@
             <li><a href="#" class="block py-1">Contact</a></li>
           </ul>
         </li>
-
-        <!-- Separate Single Items -->
-        <li><a href="#" class="block py-2">About</a></li>
-        <li><a href="#" class="block py-2">Services</a></li>
-        <li><a href="#" class="block py-2">Team</a></li>
-        <li><a href="#" class="block py-2">Jobs</a></li>
-        <li><a href="#" class="block py-2">Blog</a></li>
-        <li><a href="#" class="block py-2">Contact</a></li>
 
       </ul>
     </div>
@@ -108,7 +112,16 @@
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
 
+  // Toggle main mobile menu
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
   });
+
+  // Function to toggle submenus
+  function toggleSubMenu(id) {
+    const subMenu = document.getElementById(id);
+    const arrow = document.getElementById(id.split('-')[0] + '-arrow');
+    subMenu.classList.toggle('hidden');
+    arrow.classList.toggle('rotate-180');
+  }
 </script>

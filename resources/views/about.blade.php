@@ -60,8 +60,8 @@
           </p>
         </div>
         <div class="bg-white flex-1 flex flex-col">
-          <div class="h-14 w-14 rounded-full bg-[#1193d4] flex items-center justify-center">
-            <img src="/images/diamond.png" alt="Values Logo" class="h-7 w-7 invert brightness-0">
+          <div class="flex justify-start mb-3">            
+            <img src="/images/diamond.png" alt="Values Logo" class="w-8 h-8 ">
           </div>
           <h3 class="text-2xl font-semibold mb-2">Our Values</h3>
           <p class="text-gray-600 flex-1">
@@ -75,88 +75,9 @@
 </section>
 
 
-<div class="py-16 bg-gray-50 px-4 md:px-12 lg:px-44">
+@include('partials.history')
 
-    <!-- Pricing Plans -->
-    <h2 class="text-4xl font-bold mb-12 text-center">Select Your Plan to Start</h2>
-
-    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <!-- Plan 1 -->
-        <div class="border overflow-hidden ">
-            <!-- Price Section -->
-            <div class="bg-[#1193d4] text-white text-center py-8">
-                <h3 class="text-2xl font-semibold mb-6 mt-6">Starter</h3>
-                <p class="text-4xl font-bold">
-                    <span class="align-super text-base">$</span>19<span class="text-lg font-normal">/month</span>
-                </p>
-            </div>
-            <!-- Features -->
-            <div class="p-8 text-center">
-                <ul class="mb-6 space-y-2">
-                    <li>250MB Memory</li>
-                    <li>10 Projects</li>
-                    <li>10GB Space</li>
-                </ul>
-                <button class="w-full bg-[#1193d4] text-white px-6 py-3 rounded hover:bg-[#0e82c3] transition">sign up</button>
-            </div>
-        </div>
-
-        <!-- Plan 2 -->
-        <div class="border overflow-hidden ">
-            <div class="bg-[#1193d4] text-white text-center  py-8">
-                <h3 class="text-2xl font-semibold mb-6 mt-6">Basic</h3>
-                <p class="text-4xl font-bold">
-                    <span class="align-super text-base">$</span>29<span class="text-lg font-normal">/month</span>
-                </p>
-            </div>
-            <div class="p-8 text-center">
-                <ul class="mb-6 space-y-2">
-                    <li>250MB Memory</li>
-                    <li>10 Projects</li>
-                    <li>10GB Space</li>
-                </ul>
-                <button class="w-full bg-[#1193d4] text-white px-6 py-3 rounded hover:bg-[#0e82c3] transition">sign up</button>
-            </div>
-        </div>
-
-        <!-- Plan 3 -->
-       <div class="border overflow-hidden ">
-            <div class="bg-[#1193d4] text-white text-center py-8">
-                <h3 class="text-2xl font-semibold mb-6 mt-6">Pro</h3>
-                <p class="text-4xl font-bold">
-                    <span class="align-super text-base">$</span>49<span class="text-lg font-normal">/month</span>
-                </p>
-            </div>
-            <div class="p-8 text-center">
-                <ul class="mb-6 space-y-2">
-                    <li>250MB Memory</li>
-                    <li>10 Projects</li>
-                    <li>10GB Space</li>
-                </ul>
-                <button class="w-full bg-[#1193d4] text-white px-6 py-3 rounded hover:bg-[#0e82c3] transition">sign up</button>
-            </div>
-        </div>
-
-        <!-- Plan 4 -->
-        <div class="border overflow-hidden ">
-            <div class="bg-[#1193d4] text-white text-center py-8">
-                <h3 class="text-2xl font-semibold mb-6 mt-6">Ultra</h3>
-                <p class="text-4xl font-bold">
-                    <span class="align-super text-base">$</span>99<span class="text-lg font-normal">/month</span>
-                </p>
-            </div>
-            <div class="p-8 text-center">
-                <ul class="mb-6 space-y-2">
-                    <li>250MB Memory</li>
-                    <li>10 Projects</li>
-                    <li>10GB Space</li>
-                </ul>
-                <button class="w-full bg-[#1193d4] text-white px-6 py-3 rounded hover:bg-[#0e82c3] transition">sign up</button>
-            </div>
-        </div>
-    </div>
-</div>
-
+@include('partials.plans')
 
 @include('partials.clients_logot')
 @endsection
