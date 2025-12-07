@@ -7,10 +7,20 @@
   <div class="container mx-auto ">
     <h2 class="text-4xl font-bold text-center mb-12">Our Team</h2>
 
+    <div class="flex justify-start space-x-1 mb-10">
+      <button class="filter-btn active px-3 py-1 text-sm hover:bg-[#1193d4] hover:text-white text-gray-700 rounded-md" data-filter="all">All</button>
+      <button class="filter-btn px-3 py-1 text-sm hover:bg-[#1193d4] hover:text-white text-gray-700 rounded-md" data-filter="CEO">CEO</button>
+      <button class="filter-btn px-3 py-1 text-sm hover:bg-[#1193d4] hover:text-white text-gray-700 rounded-md" data-filter="Human Resources">Human Resources</button>
+      <button class="filter-btn px-3 py-1 text-sm hover:bg-[#1193d4] hover:text-white text-gray-700 rounded-md" data-filter="New Manager">New Manager</button>
+      <button class="filter-btn px-3 py-1 text-sm hover:bg-[#1193d4] hover:text-white text-gray-700 rounded-md" data-filter="Marketing Head">Marketing Head</button>
+      <button class="filter-btn px-3 py-1 text-sm hover:bg-[#1193d4] hover:text-white text-gray-700 rounded-md" data-filter="Lead Developer">Lead Developer</button>
+    </div>
+
+
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 ">
 
       <!-- Team Member 1 -->
-      <div class="flex flex-col md:flex-row items-center gap-6">
+      <div class="team-member flex flex-col md:flex-row items-center gap-6" data-category="CEO">
         <img src="images/team-img-1-1.jpg" alt="Jeff Walsh" class="w-64 h-128 mx-auto object-cover mb-4">
         
         <div class="text-left md:w-1/2">
@@ -28,54 +38,128 @@
       </div>
 
       <!-- Team Member 2 -->
-      <div class="bg-[rgb(244,240,240)]  text-center">
-        <img src="images/team-img-1-2.jpg" alt="Janet Adams" class="w-full h-64 mx-auto  object-cover mb-4">
-        <h3 class="text-xl font-bold mb-1">Janet Adams</h3>
-        <p class="text-blue-500 font-semibold mb-2">Human Resources</p>
+      <div class="team-member flex flex-col md:flex-row items-center gap-6" data-category="CEO">
+        <img src="images/team-img-1-2.jpg" alt="Jeff Walsh" class="w-64 h-128 mx-auto object-cover mb-4">
+        
+        <div class="text-left md:w-1/2">
+            <h3 class="text-xl font-bold mb-1">Jeff Walsh</h3>
+        <p class="text-blue-500 font-semibold mb-2">CEO</p>
         <p class="text-gray-600 text-sm">Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci.</p>
-       
-        <div class="flex justify-center space-x-4 mt-5">
+        <!-- Socials -->
+        <div class="flex justify-start space-x-4 mt-5">
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-twitter"></i></a>
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-instagram"></i></a>
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-linkedin-in"></i></a>
         </div>
+          </div>
       </div>
 
 
       <!-- Team Member 3 -->
-      <div class="bg-[rgb(244,240,240)]   text-center">
-        <img src="images/team-img-1-3.jpg" alt="Colin Weiland" class="w-full h-64 mx-auto  object-cover mb-4">
-        <h3 class="text-xl font-bold mb-1">Colin Weiland</h3>
-        <p class="text-blue-500 font-semibold mb-2">New Business Manager</p>
-        <p class="text-gray-600 text-sm">Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci.</p>
+      <div class="team-member flex flex-col md:flex-row items-center gap-6" data-category="New Manager">
+        <img src="images/team-img-1-3.jpg" alt="Jeff Walsh" class="w-64 h-128 mx-auto object-cover mb-4">
         
-        <div class="flex justify-center space-x-4 mt-5">
+        <div class="text-left md:w-1/2">
+            <h3 class="text-xl font-bold mb-1">Jeff Walsh</h3>
+        <p class="text-blue-500 font-semibold mb-2">New Manager</p>
+        <p class="text-gray-600 text-sm">Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci.</p>
+        <!-- Socials -->
+        <div class="flex justify-start space-x-4 mt-5">
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-twitter"></i></a>
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-instagram"></i></a>
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-linkedin-in"></i></a>
         </div>
+          </div>
       </div>
 
       <!-- Team Member 4 -->
-      <div class="bg-[rgb(244,240,240)]   text-center ">
-        <img src="images/team-img-1-4.jpg" alt="Wendy Willings" class="w-full h-64 mx-auto object-cover mb-4">
-        <h3 class="text-xl font-bold mb-1">Wendy Willings</h3>
-        <p class="text-blue-500 font-semibold mb-2">Public Relations</p>
-        <p class="text-gray-600 text-sm">Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci.</p>
+      <div class="team-member flex flex-col md:flex-row items-center gap-6" data-category="Human Resources">
+        <img src="images/team-img-1-4.jpg" alt="Jeff Walsh" class="w-64 h-128 mx-auto object-cover mb-4">
         
-        <div class="flex justify-center space-x-4 mt-5">
+        <div class="text-left md:w-1/2">
+            <h3 class="text-xl font-bold mb-1">Jeff Walsh</h3>
+        <p class="text-blue-500 font-semibold mb-2">Human Resources</p>
+        <p class="text-gray-600 text-sm">Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci.</p>
+        <!-- Socials -->
+        <div class="flex justify-start space-x-4 mt-5">
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-facebook-f"></i></a>
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-twitter"></i></a>
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-instagram"></i></a>
           <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-linkedin-in"></i></a>
         </div>
+          </div>
       </div>
-    
+
+      <!--Team Member 5 -->
+      <div class="team-member flex flex-col md:flex-row items-center gap-6" data-category="Marketing Head">
+        <img src="images/team-img-1-5.jpg" alt="Jeff Walsh" class="w-64 h-128 mx-auto object-cover mb-4">
+        
+        <div class="text-left md:w-1/2">
+            <h3 class="text-xl font-bold mb-1">Jeff Walsh</h3>
+        <p class="text-blue-500 font-semibold mb-2">Marketing Head</p>
+        <p class="text-gray-600 text-sm">Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci.</p>
+        <!-- Socials -->
+        <div class="flex justify-start space-x-4 mt-5">
+          <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+          </div>
+      </div>
+
+      <!-- Team Member 6 -->
+      <div class="team-member flex flex-col md:flex-row items-center gap-6" data-category="Lead Developer">  
+        <img src="images/team-img-1-6.jpg" alt="Jeff Walsh" class="w-64 h-128 mx-auto object-cover mb-4">
+        
+        <div class="text-left md:w-1/2">
+            <h3 class="text-xl font-bold mb-1">Jeff Walsh</h3>
+        <p class="text-blue-500 font-semibold mb-2">Lead Developer</p>
+        <p class="text-gray-600 text-sm">Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci.</p>
+        <!-- Socials -->
+        <div class="flex justify-start space-x-4 mt-5">
+          <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-black hover:text-gray-700"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+          </div>
+      </div>
 
   </div>
     
 </section>
 
 
+<script>
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const teamMembers = document.querySelectorAll(".team-member");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+
+      // change active button styling
+      filterButtons.forEach(btn => btn.classList.remove("active", "bg-blue-500", "text-white"));
+      button.classList.add("active", "bg-blue-500", "text-white");
+
+      teamMembers.forEach(member => {
+        const category = member.getAttribute("data-category");
+
+        if (filter === "all" || category === filter) {
+          member.style.display = "flex";
+        } else {
+          member.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+<style>
+  .filter-btn.active {
+    background-color: #1193d4; /* Tailwind blue-500 */
+    color: white;
+  }
+</style>

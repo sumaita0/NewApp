@@ -30,3 +30,7 @@ Route::get('/services', function () {
 Route::get('/team', function () {
     return view('teamPage');
 })->name('team');
+
+Route::get('/contact', function () {
+    return view('contactPage');
+})->name('contact');

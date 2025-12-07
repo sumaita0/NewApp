@@ -38,7 +38,7 @@
           <li><a href="/team" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Team</a></li>
           <li><a href="#" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Jobs</a></li>
           <li><a href="#" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Blog</a></li>
-          <li><a href="#" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Contact</a></li>
+          <li><a href="/contact" class="block px-4 py-2 text-gray-400 text-left hover:text-white hover:bg-[#1193d4]">Contact</a></li>
         </ul>
       </li>
 
@@ -46,9 +46,9 @@
       <li><a href="/about" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">About</a></li>
       <li><a href="/services" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Services</a></li>
       <li><a href="/team" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Team</a></li>
-      <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Jobs</a></li>
+      <li><a href="/" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Jobs</a></li>
       <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Blog</a></li>
-      <li><a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Contact</a></li>
+      <li><a href="/contact" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold">Contact</a></li>
       <li>
         <a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] border rounded border-none font-semibold flex items-center">
           <!-- Search Icon -->
