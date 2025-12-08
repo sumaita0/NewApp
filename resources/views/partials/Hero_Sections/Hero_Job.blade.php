@@ -1,14 +1,14 @@
   <!-- Hero Section -->
-  <section class="relative bg-cover bg-center h-[40vh]" style="background-image: url('/images/hero1.jpg');" >
+  <section class="relative bg-cover bg-center h-[70vh]" style="background-image: url('/images/hero1.jpg');" >
     <div class="absolute inset-0 bg-black/50"></div>
 
     <div class="container mx-auto h-full flex items-center justify-center relative z-10 px-4 sm:px-8 md:px-24 lg:px-44">
       <div class="max-w-2xl text-center lg:text-left text-white space-y-6">
         <h1 class="text-4xl text-center sm:text-5xl md:text-6xl font-extrabold leading-tight">
-          About Us
+          Jobs Available
         </h1>
         <p class="text-lg text-center sm:text-xl md:text-2xl">
-            Learn more about our mission, vision, and values.
+            Explore exciting career opportunities with us. Join our team and make a difference!
         </p>
 
         <div class="text-center mt-12">

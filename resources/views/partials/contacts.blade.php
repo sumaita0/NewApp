@@ -2,13 +2,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <!-- CONTACT SECTION WITH FULL-WIDTH BG -->
-<section id="contact" 
+<section 
   class="w-full bg-cover bg-center bg-no-repeat py-20 px-4 md:px-12 lg:px-44" 
   style="background-image: url('/images/hero_contact.jpg');">
   
   <div class="container mx-auto text-white text-center">
     
-    <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+    <h2 class="text-4xl font-bold mb-4">our headquarters</h2>
 
     <p class="max-w-2xl mx-auto mb-10">
       We trust in longlasting partnerships with the most important brands on the market
@@ -92,6 +92,7 @@
     
     <!-- Form Box (half width on lg) -->
     <div class="bg-white p-8 shadow-md w-full lg:w-1/2">
+      
       <h3 class="text-2xl font-semibold mb-6">Drop us a line</h3>
 
       <form class="grid grid-cols-1 gap-5">

@@ -2,7 +2,7 @@
 
 
 @section('content')
-@include('partials.Hero_About')
+@include('partials.Hero_Sections.Hero_Service')
 
 
 @include('partials.service')

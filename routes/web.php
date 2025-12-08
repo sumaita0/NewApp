@@ -34,3 +34,7 @@ Route::get('/team', function () {
 Route::get('/contact', function () {
     return view('contactPage');
 })->name('contact');
+
+Route::get('/job', function () {
+    return view('JobPage');
+})->name('job');

@@ -3,7 +3,7 @@
 
 @section('content')
 
-@include('partials.Hero_About')
+@include('partials.Hero_Sections.Hero_About')
 
 <!-- About Subsection -->
 <section id="about" class="py-16 bg-white px-4 md:px-12 lg:px-44 mt-10">
