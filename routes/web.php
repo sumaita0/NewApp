@@ -16,9 +16,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
+
 Route::get('/about', function () {
     return view('about');
 })->name('about');
@@ -38,3 +36,7 @@ Route::get('/contact', function () {
 Route::get('/job', function () {
     return view('JobPage');
 })->name('job');
+
+Route::get('/blog', function () {
+    return view('blogPage');
+})->name('blog');

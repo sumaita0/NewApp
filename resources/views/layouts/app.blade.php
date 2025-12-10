@@ -12,7 +12,7 @@
 
 <body class="bg-white text-gray-900">
 
-  @include('partials.topbar')
+ 
   @include('partials.navbar')
 
 
