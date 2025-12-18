@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,6 +26,10 @@ Route::get('/services', function () {
     return view('services');
 })->name('services');
 
+Route::get('/service1', function () {
+    return view('service1');
+})->name('service1');
+
 Route::get('/team', function () {
     return view('teamPage');
 })->name('team');
@@ -40,3 +45,9 @@ Route::get('/job', function () {
 Route::get('/blog', function () {
     return view('blogPage');
 })->name('blog');
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\Controller::class, 'index'])->name('home');
+

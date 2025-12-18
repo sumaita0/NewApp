@@ -1,6 +1,8 @@
 <!-- Footer -->
-<footer class="bg-[#333333] text-gray-200 py-10 px-12 lg:px-44">
-  <div class="container mx-auto grid md:grid-cols-4 gap-8">
+<footer class="bg-[#333333] text-gray-200 py-10 px-4 sm:px-8 lg:px-44">
+
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+ 
     
     <!-- Contact Info -->
     <div class="space-y-4">
@@ -14,7 +16,8 @@
 
         <!-- Text overlay aligned to left -->
         <div class="absolute left-0 top-0 flex flex-col justify-center px-0 h-full">
-          <p class="font-semibold text-white ml-2">
+          <p class="font-monospace text-white ml-2 text-sm sm:text-base">
+
             795 Folsom Ave, Suite 600<br>
             San Francisco, CA 94107
           </p>
@@ -32,7 +35,7 @@
 
     <!-- Twitter Feed -->
     <div class="space-y-4">
-      <h3 class="text-xl font-bold mb-4">Twitter Feed</h3>
+      <h3 class="text-xl font-monospace mb-4">Twitter Feed</h3>
       <div class="space-y-4 text-sm">
         <p>“A Guide to Better Brainstorming <a href="http://enva.to/nfNrz" class="text-blue-400 hover:underline">http://enva.to/nfNrz</a> by @jeff_haden”<br><span class="text-gray-400 text-xs">May 22, 2014</span></p>
         <p>“Are you a student? You only have 48 hours left to grab a full year on Tuts+ for just $45! Don't miss out. <a href="http://ow.ly/McvuJ" class="text-blue-400 hover:underline">http://ow.ly/McvuJ</a>”<br><span class="text-gray-400 text-xs">May 22, 2014</span></p>
@@ -42,26 +45,33 @@
     <!-- Photostream -->
     <div class="space-y-4">
       <h3 class="text-xl font-bold mb-4">Photostream</h3>
-      <div class="grid grid-cols-3 gap-2">
-        <img src="images/photo-img-1.jpg" alt="photo-img-1.jpg" class="rounded">
-        <img src="images/photo-img-2.jpg" alt="photo-img-2.jpg" class="rounded">
-        <img src="images/photo-img-3.jpg" alt="photo-img-3.jpg" class="rounded">
-        <img src="images/photo-img-4.jpg" alt="photo-img-4.jpg" class="rounded">
-        <img src="images/photo-img-5.jpg" alt="photo-img-5.jpg" class="rounded">
-        <img src="images/photo-img-6.jpg" alt="photo-img-6.jpg" class="rounded">
+      <div class="grid grid-cols-3 sm:grid-cols-3 gap-2">
+
+        <!-- Photostream -->
+          <img src="{{ asset('images/photo-img-1.jpg') }}" alt="photo-img-1.jpg" class="rounded">
+          <img src="{{ asset('images/photo-img-2.jpg') }}" alt="photo-img-2.jpg" class="rounded">
+          <img src="{{ asset('images/photo-img-3.jpg') }}" alt="photo-img-3.jpg" class="rounded">
+          <img src="{{ asset('images/photo-img-4.jpg') }}" alt="photo-img-4.jpg" class="rounded">
+          <img src="{{ asset('images/photo-img-5.jpg') }}" alt="photo-img-5.jpg" class="rounded">
+          <img src="{{ asset('images/photo-img-6.jpg') }}" alt="photo-img-6.jpg" class="rounded">
       </div>
     </div>
 
     <!-- Categories -->
     <div class="space-y-4">
       <h3 class="text-xl font-bold mb-4">Categories</h3>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Business</a></li>
-        <li><a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Technology</a></li>
-        <li><a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Design</a></li>
-        <li><a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Lifestyle</a></li>
-        <li><a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Travel</a></li>
-      </ul>
+        <div class="flex flex-wrap gap-2 text-sm sm:text-base">
+
+            <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Business</a>
+            <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Envato</a>
+            <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Themes</a>
+            <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Responsiveness</a>
+            <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">SEO</a>
+            <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Mobile</a>
+            <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">IOS</a>
+            <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Design</a>
+            <a href="#" class="bg-gray-800 p-2 rounded-lg hover:bg-[#1193d4] hover:text-white transition flex flex-col items-center text-center">Flat</a>
+        </div>
     </div>
   </div>
 </footer>
@@ -69,7 +79,8 @@
 
   <!-- Footer Bottom -->
 <div class="w-full bg-gray-950 py-4">
-  <div class="container mx-auto px-12 lg:px-44  flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+  <div class="container mx-auto px-4 sm:px-8 lg:px-44 flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+
 
     <!-- Left -->
     <div class="mb-2 md:mb-0 text-center md:text-left font-bold text-white">

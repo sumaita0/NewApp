@@ -3,5 +3,7 @@
 @section('content')
 
 @include('partials.Hero_Sections.Hero_About')
-@include('partials.blog')
+
+@include('partials.Blog_Main')
+
 @endsection

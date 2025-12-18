@@ -1,5 +1,5 @@
 <!-- Topbar -->
-<div id="topbar" class="bg-[rgb(244,240,240)] text-gray-800 text-sm fixed w-full top-0 left-0 z-50 transition-transform duration-300">
+<div id="topbar" class="hidden md:flex bg-[rgb(244,240,240)] text-gray-800 text-sm fixed w-full top-0 left-0 z-50 transition-transform duration-300">
   <div class="container mx-auto flex flex-col md:flex-row justify-between items-center py-2 px-2 sm:px-4 md:px-12 lg:px-44 space-y-2 md:space-y-0">
     <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-1 sm:space-y-0 text-center md:text-left">
       <span class="sm:whitespace-nowrap">Email: info@company.com</span>
@@ -28,97 +28,191 @@
         <a href="#" class="py-1 px-2 hover:bg-[#1193d4] text-black hover:text-white rounded-lg"><i class="bi bi-twitter text-lg"></i></a>
         <a href="#" class="py-1 px-2 hover:bg-[#1193d4] text-black hover:text-white rounded-lg"><i class="bi bi-linkedin text-lg"></i></a>
       </div>
- 
     </div>
   </div>
 </div>
 
 <!-- Navbar -->
 <nav id="navbar" class="bg-white fixed w-full z-40 shadow transition-all duration-300">
-  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-4 md:px-12 lg:px-44">
-    <!-- Logo -->
-    <a href="/" class="flex items-center mb-2 md:mb-0">
-      <img src="images/logo.png" alt="Logo" class="h-10 w-auto">
-    </a>
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex space-x-2 items-center">
-      
-      <li><a href="/" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Home</a></li>
-      <li>
-        <a href="/about" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">About</a>
-      </li>
-     <!-- Services Dropdown -->
-<li class="group relative">
-  <!-- Main Services link -->
-  <a href="/services" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Services</a>
+  <!-- PARENT DIV (RELATIVE) -->
+  <div class="relative container mx-auto px-4 md:px-12 lg:px-44">
 
-  <!-- Dropdown menu -->
-  <ul class="absolute top-full left-0 mt-2 bg-gray-700 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 w-48">
-    <!-- Arrow pointing up -->
-    <div class="absolute top-0 left-4 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-gray-700"></div>
+    <!-- ================= DESKTOP NAV ================= -->
+    <div class="flex justify-between items-center py-4">
 
-    <!-- Dropdown items -->
-    <li>
-      <a href="/services/service1" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 1</a>
-    </li>
-    <li>
-      <a href="/services/service2" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 2</a>
-    </li>
-    <li>
-      <a href="/services/service3" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 3</a>
-    </li>
-  </ul>
-</li>
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-10 w-auto">
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-2 items-center">
+        <!-- Search Box -->
+        <li>
+          <div class="relative">
+            <input 
+              type="text" 
+              placeholder="Search..." 
+              class="pl-3 pr-10 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1193d4] focus:border-[#1193d4] text-sm"
+            />
+            <button class="absolute right-1 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#1193d4]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                      d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+              </svg>
+            </button>
+          </div>
+        </li>
+
+        <li><a href="/" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Home</a></li>
+        <li><a href="/about" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">About</a></li>
+
+        <li class="group relative">
+          <a href="/services" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Services</a>
+          <ul class="absolute top-full left-0 mt-2 bg-gray-700 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 w-48">
+            <div class="absolute top-0 left-4 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-gray-700"></div>
+            <li><a href="/service1" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 1</a></li>
+            <li><a href="/service1" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 2</a></li>
+            <li><a href="/service1" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 3</a></li>
+          </ul>
+        </li>
+
+        <li><a href="/team" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Team</a></li>
+        <li><a href="/job" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Jobs</a></li>
+        <li><a href="/blog" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Blog</a></li>
+        <li><a href="/contact" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Contact</a></li>
+
+        @guest
+          <li><a href="{{ route('login') }}" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Login</a></li>
+          <li><a href="{{ route('register') }}" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Sign Up</a></li>
+        @else
+          <li class="group relative">
+            <a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace flex items-center space-x-2">
+              <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile" class="w-6 h-6 rounded-full">
+              <span>{{ Auth::user()->name }}</span>
+            </a>
+            <ul class="absolute top-full right-0 mt-2 bg-gray-700 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 w-48">
+              <div class="absolute top-0 right-4 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-gray-700"></div>
+              <li><a href="{{ route('profile.show') }}" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Profile</a></li>
+              <li>
+                <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                  <button type="submit" class="w-full text-left px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Logout</button>
+                </form>
+              </li>
+            </ul>
+          </li>
+        @endguest
+      </ul>
+
+      <!-- Mobile Buttons -->
+          <div class="md:hidden flex items-center space-x-2">
+
+            <!-- Search Button -->
+            <button id="mobile-search-btn"
+              class="flex items-center px-3 py-1.5 border rounded text-gray-800 border-gray-800
+                    hover:text-white hover:bg-[#1193d4] focus:outline-none">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-4.35-4.35A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+              </svg>
+            </button>
+
+            <!-- Menu Button -->
+            <button id="menu-btn"
+              class="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-800
+                    hover:text-white hover:bg-[#1193d4] focus:outline-none">
+              <svg class="fill-current h-3 w-3" viewBox="0 0 20 20">
+                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+              </svg>
+            </button>
+
+          </div>
 
 
-      <li><a href="/team" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Team</a></li>
-      <li><a href="/job" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Jobs</a></li>
-      <li><a href="/blog" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Blog</a></li>
-      <li><a href="/contact" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Contact</a></li>
-    </ul>
-
-    <!-- Mobile Menu Button -->
-    <div class="md:hidden">
-      <button id="menu-btn" class="text-gray-800 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
     </div>
+
+    <!-- ================= MOBILE MENU ================= -->
+    <div class="md:hidden">
+      <ul id="mobile-menu" class="hidden flex-col bg-white w-full shadow-lg">
+        <li><a href="/" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Home</a></li>
+        <li><a href="/about" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">About</a></li>
+        <li>
+          <a href="/services" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Services</a>
+          <ul class="pl-4">
+            <li><a href="/service1" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Service 1</a></li>
+            <li><a href="/service2" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Service 2</a></li>
+            <li><a href="/service3" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Service 3</a></li>
+          </ul>
+        </li>
+        <li><a href="/team" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Team</a></li>
+        <li><a href="/job" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Jobs</a></li>
+        <li><a href="/blog" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Blog</a></li>
+        <li><a href="/contact" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div id="mobile-search-bar"
+        class="hidden md:hidden bg-white border-t border-b px-4 py-3">
+      <input
+        type="text"
+        placeholder="Search..."
+        class="w-full px-3 py-2 border rounded focus:outline-none
+              focus:ring-2 focus:ring-[#1193d4]">
+    </div>
+
   </div>
 </nav>
 
-<script>
 
-   // Add 'active' class to the current page link
-  const currentPath = window.location.pathname; // e.g., "/about"
+<script>
+  // Highlight active link
+  const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('#navbar a');
 
   navLinks.forEach(link => {
-    // Compare the link's href path to current path
     const linkPath = new URL(link.href).pathname;
     if(linkPath === currentPath) {
-      link.classList.add('bg-[#1193d4]', 'text-white'); // active styles
+      link.classList.add('bg-[#1193d4]', 'text-white');
+      const parentLi = link.closest('li.group');
+      if(parentLi) {
+        const parentLink = parentLi.querySelector('a');
+        if(parentLink) parentLink.classList.add('bg-[#1193d4]', 'text-white');
+      }
+    }
+    if(linkPath === '/services' && currentPath.startsWith('/service')) {
+      link.classList.add('bg-[#1193d4]', 'text-white');
     }
   });
 
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
 
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+
+  const mobileSearchBtn = document.getElementById('mobile-search-btn');
+  const mobileSearchBar = document.getElementById('mobile-search-bar');
+
+  mobileSearchBtn.addEventListener('click', () => {
+    mobileSearchBar.classList.toggle('hidden');
+  });
+
+
+  // Topbar hide/show on scroll
   const topbar = document.getElementById('topbar');
   const navbar = document.getElementById('navbar');
 
   function updateNavbar() {
     const topbarHeight = topbar.offsetHeight;
     if(window.scrollY > topbarHeight){
-      // Hide topbar
       topbar.style.transform = `translateY(-${topbarHeight}px)`;
-      // Move navbar to top
       navbar.style.top = '0';
     } else {
-      // Show topbar
       topbar.style.transform = 'translateY(0)';
-      // Navbar below topbar
       navbar.style.top = topbarHeight + 'px';
     }
   }
@@ -127,9 +221,5 @@
   window.addEventListener('load', updateNavbar);
 </script>
 
-
-
-
 <!-- Bootstrap Icons -->
-
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
