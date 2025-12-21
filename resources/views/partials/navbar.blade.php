@@ -32,141 +32,148 @@
   </div>
 </div>
 
+
 <!-- Navbar -->
 <nav id="navbar" class="bg-white fixed w-full z-40 shadow transition-all duration-300">
+  <div class="flex justify-between items-center py-4 px-4 sm:px-8 lg:px-44 w-full">
 
-  <!-- PARENT DIV (RELATIVE) -->
-  <div class="relative container mx-auto px-4 md:px-12 lg:px-44">
+    <!-- Logo -->
+    <a href="/" class="flex items-center">
+      <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-10 w-auto">
+    </a>
 
-    <!-- ================= DESKTOP NAV ================= -->
-    <div class="flex justify-between items-center py-4">
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex flex-wrap justify-end items-center space-x-2 w-full">
+      <!-- Search Box -->
+      <li>
+        <div class="relative">
+          <input 
+            type="text" 
+            placeholder="Search..." 
+            class="pl-3 pr-10 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1193d4] focus:border-[#1193d4] text-sm"
+          />
+          <button class="absolute right-1 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#1193d4]">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+            </svg>
+          </button>
+        </div>
+      </li>
 
-      <!-- Logo -->
-      <a href="/" class="flex items-center">
-        <img src="{{ asset('images/logo.png') }}" alt="Logo" class="h-10 w-auto">
-      </a>
+      <li><a href="/" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Home</a></li>
+      <li><a href="/about" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">About</a></li>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-2 items-center">
-        <!-- Search Box -->
-        <li>
-          <div class="relative">
-            <input 
-              type="text" 
-              placeholder="Search..." 
-              class="pl-3 pr-10 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#1193d4] focus:border-[#1193d4] text-sm"
-            />
-            <button class="absolute right-1 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#1193d4]">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                      d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
-              </svg>
-            </button>
-          </div>
-        </li>
+      <li class="group relative">
+        <a href="/services" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Services</a>
+        <ul class="absolute top-full left-0 mt-2 bg-gray-700 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 w-48">
+          <div class="absolute top-0 left-4 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-gray-700"></div>
+          <li><a href="/service1" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 1</a></li>
+          <li><a href="/service2" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 2</a></li>
+          <li><a href="/service3" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 3</a></li>
+        </ul>
+      </li>
 
-        <li><a href="/" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Home</a></li>
-        <li><a href="/about" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">About</a></li>
+      <li><a href="/team" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Team</a></li>
+      <li><a href="/job" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Jobs</a></li>
+      <li><a href="/blog" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Blog</a></li>
+      <li><a href="/contact" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Contact</a></li>
 
+      @guest
+        <li><a href="{{ route('login') }}" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Login</a></li>
+        <li><a href="{{ route('register') }}" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Sign Up</a></li>
+      @else
         <li class="group relative">
-          <a href="/services" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Services</a>
-          <ul class="absolute top-full left-0 mt-2 bg-gray-700 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 w-48">
-            <div class="absolute top-0 left-4 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-gray-700"></div>
-            <li><a href="/service1" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 1</a></li>
-            <li><a href="/service1" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 2</a></li>
-            <li><a href="/service1" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Service 3</a></li>
+          <a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace flex items-center space-x-2">
+            <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile" class="w-6 h-6 rounded-full">
+            <span>{{ Auth::user()->name }}</span>
+          </a>
+          <ul class="absolute top-full right-0 mt-2 bg-gray-700 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 w-48">
+            <div class="absolute top-0 right-4 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-gray-700"></div>
+            <li><a href="{{ route('profile.show') }}" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Profile</a></li>
+            <li>
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="w-full text-left px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Logout</button>
+              </form>
+            </li>
           </ul>
         </li>
+      @endguest
+    </ul>
 
-        <li><a href="/team" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Team</a></li>
-        <li><a href="/job" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Jobs</a></li>
-        <li><a href="/blog" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Blog</a></li>
-        <li><a href="/contact" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Contact</a></li>
+    <!-- Mobile Buttons -->
+    <div class="md:hidden flex items-center space-x-2">
+      <!-- Search Button -->
+      <button id="mobile-search-btn"
+        class="flex items-center px-3 py-1.5 border rounded text-gray-800 border-gray-800
+              hover:text-white hover:bg-[#1193d4] focus:outline-none">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-4.35-4.35A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
+        </svg>
+      </button>
 
-        @guest
-          <li><a href="{{ route('login') }}" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Login</a></li>
-          <li><a href="{{ route('register') }}" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace">Sign Up</a></li>
-        @else
-          <li class="group relative">
-            <a href="#" class="py-2 px-3 hover:text-white hover:bg-[#1193d4] rounded font-monospace flex items-center space-x-2">
-              <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile" class="w-6 h-6 rounded-full">
-              <span>{{ Auth::user()->name }}</span>
-            </a>
-            <ul class="absolute top-full right-0 mt-2 bg-gray-700 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-50 w-48">
-              <div class="absolute top-0 right-4 -translate-y-2 w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-gray-700"></div>
-              <li><a href="{{ route('profile.show') }}" class="block px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Profile</a></li>
-              <li>
-                <form method="POST" action="{{ route('logout') }}">
-                  @csrf
-                  <button type="submit" class="w-full text-left px-4 py-2 text-gray-200 hover:bg-[#1193d4] hover:text-white">Logout</button>
-                </form>
-              </li>
+      <!-- Menu Button -->
+      <button id="menu-btn"
+        class="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-800
+              hover:text-white hover:bg-[#1193d4] focus:outline-none">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20">
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+ 
+
+
+      <!-- ================= MOBILE MENU ================= -->
+      <div class="md:hidden">
+        <ul id="mobile-menu" class="hidden flex-col bg-white w-full shadow-lg">
+          <li><a href="/" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Home</a></li>
+          <li><a href="/about" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">About</a></li>
+          <li>
+            <a href="/services" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Services</a>
+            <ul class="pl-4">
+              <li><a href="/service1" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Service 1</a></li>
+              <li><a href="/service2" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Service 2</a></li>
+              <li><a href="/service3" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Service 3</a></li>
             </ul>
           </li>
-        @endguest
-      </ul>
-
-      <!-- Mobile Buttons -->
-          <div class="md:hidden flex items-center space-x-2">
-
-            <!-- Search Button -->
-            <button id="mobile-search-btn"
-              class="flex items-center px-3 py-1.5 border rounded text-gray-800 border-gray-800
-                    hover:text-white hover:bg-[#1193d4] focus:outline-none">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-4.35-4.35A7.5 7.5 0 1110.5 3a7.5 7.5 0 016.15 13.65z" />
-              </svg>
-            </button>
-
-            <!-- Menu Button -->
-            <button id="menu-btn"
-              class="flex items-center px-3 py-2 border rounded text-gray-800 border-gray-800
-                    hover:text-white hover:bg-[#1193d4] focus:outline-none">
-              <svg class="fill-current h-3 w-3" viewBox="0 0 20 20">
-                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-              </svg>
-            </button>
-
-          </div>
-
+          <li><a href="/team" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Team</a></li>
+          <li><a href="/job" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Jobs</a></li>
+          <li><a href="/blog" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Blog</a></li>
+          <li><a href="/contact" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+      <div id="mobile-search-bar" class="hidden md:hidden bg-white border-t border-b px-4 py-3">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[#1193d4]">
+      </div>
 
     </div>
-
-    <!-- ================= MOBILE MENU ================= -->
-    <div class="md:hidden">
-      <ul id="mobile-menu" class="hidden flex-col bg-white w-full shadow-lg">
-        <li><a href="/" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Home</a></li>
-        <li><a href="/about" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">About</a></li>
-        <li>
-          <a href="/services" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Services</a>
-          <ul class="pl-4">
-            <li><a href="/service1" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Service 1</a></li>
-            <li><a href="/service2" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Service 2</a></li>
-            <li><a href="/service3" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Service 3</a></li>
-          </ul>
-        </li>
-        <li><a href="/team" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Team</a></li>
-        <li><a href="/job" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Jobs</a></li>
-        <li><a href="/blog" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Blog</a></li>
-        <li><a href="/contact" class="block px-4 py-2 hover:bg-[#1193d4] hover:text-white">Contact</a></li>
-      </ul>
-    </div>
-    <div id="mobile-search-bar"
-        class="hidden md:hidden bg-white border-t border-b px-4 py-3">
-      <input
-        type="text"
-        placeholder="Search..."
-        class="w-full px-3 py-2 border rounded focus:outline-none
-              focus:ring-2 focus:ring-[#1193d4]">
-    </div>
-
   </div>
 </nav>
 
 
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<style>
+/* Hover only when active */
+#menu-btn.active:hover,
+#mobile-search-btn.active:hover {
+    background-color: #1193d4;
+    color: white;
+}
+</style>
+
 <script>
-  // Highlight active link
+  // Highlight active desktop link
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('#navbar a');
 
@@ -191,16 +198,35 @@
 
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
+    menuBtn.classList.toggle('active'); // hover only works when active
   });
 
-
+  // Mobile search toggle
   const mobileSearchBtn = document.getElementById('mobile-search-btn');
   const mobileSearchBar = document.getElementById('mobile-search-bar');
 
   mobileSearchBtn.addEventListener('click', () => {
     mobileSearchBar.classList.toggle('hidden');
+    mobileSearchBtn.classList.toggle('active'); // hover only works when active
   });
 
+  // Mobile menu links: active + hover behavior
+  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+      mobileMenu.classList.add('hidden');
+    });
+
+    link.addEventListener('mouseenter', () => {
+      if(!link.classList.contains('active')) link.classList.add('hover-active');
+    });
+    link.addEventListener('mouseleave', () => {
+      link.classList.remove('hover-active');
+    });
+  });
 
   // Topbar hide/show on scroll
   const topbar = document.getElementById('topbar');
@@ -220,6 +246,7 @@
   window.addEventListener('scroll', updateNavbar);
   window.addEventListener('load', updateNavbar);
 </script>
+
 
 <!-- Bootstrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">

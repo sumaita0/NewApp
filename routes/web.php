@@ -51,3 +51,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\Controller::class, 'index'])->name('home');
 
+Route::get('/login', [\Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::class, 'create'])
+    ->middleware(['guest'])
+    ->name('login');
+
+Route::post('/login', [\Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::class, 'store'])
+    ->middleware(['guest']);
+
+Route::post('/logout', [\Laravel\Fortify\Http\Controllers\AuthenticatedSessionController::class, 'destroy'])
+    ->middleware(['auth'])
+    ->name('logout');
