@@ -22,7 +22,7 @@
                 
                 <!-- Profile Photo -->
                 <div class="mb-6 md:mb-0">
-                    <img src="{{ $user->profile_photo_url }}" 
+                    <img src="{{ $user->profile_photo_path ? asset('images/' . $user->profile_photo_path) : asset('images/default-user.png') }}" 
                          alt="Profile Photo" 
                          class="w-32 h-32 rounded-full object-cover border-2 border-gray-300">
                 </div>
@@ -38,6 +38,13 @@
                     <p class="text-gray-500">Date of Birth: {{ $user->date_of_birth ?? 'Not set' }}</p>
                     <p class="text-gray-500">Bio: {{ $user->bio ?? 'No bio yet' }}</p>
                 </div>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6">
+                    <a href="{{ route('profile.edit') }}" 
+                    class="block px-4 sm:px-6 py-2 text-gray-700 font-semibold bg-slate-500 hover:bg-[#1193d4] hover:text-white rounded">
+                        Edit Profile
+                    </a>
+                 </div>
             </div>
         </div>
 

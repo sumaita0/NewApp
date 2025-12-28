@@ -66,35 +66,62 @@
             </div>
         </div>
 
-        <!-- Services Section -->
-        <section id="services" class="py-10 px-2 sm:px-0">
-            <div class="text-center mb-6">
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">Our Services</h2>
-            </div>
+       <!-- Services Section -->
+<section id="services" class="py-10 px-2 sm:px-0">
+    <div class="text-center mb-6">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">Our Services</h2>
+    </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                @forelse($services as $service)
-                    <a href="{{ route('services.show', $service->slug) }}"
-                       class="bg-[rgb(244,240,240)] p-6 sm:p-8 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer rounded">
-                        <div class="mb-4">
-                            <img src="{{ $service->icon ? asset('images/' . $service->icon) : '/images/default-service.png' }}"
-                                 class="h-12 w-12 service-icon transition"
-                                 alt="{{ $service->title }}">
-                        </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        @forelse($services as $service)
+            <a href="{{ route('services.show', $service->slug) }}"
+               class="bg-[rgb(244,240,240)] p-6 sm:p-8 group transition flex flex-col items-center text-center hover:bg-[#1193d4] cursor-pointer rounded h-full">
 
-                        <h3 class="text-lg sm:text-xl font-bold mb-2 text-black group-hover:text-white transition">
-                            {{ $service->title }}
-                        </h3>
+                <!-- Icon -->
+                <div class="mb-4">
+                    <img src="{{ $service->icon ? asset('images/' . $service->icon) : '/images/default-service.png' }}"
+                         class="h-12 w-12 service-icon transition"
+                         alt="{{ $service->title }}">
+                </div>
 
-                        <p class="text-gray-800 group-hover:text-white transition mb-2">
-                            {{ $service->description }}
-                        </p>
-                    </a>
-                @empty
-                    <p class="col-span-3 text-center text-gray-500">No services created yet.</p>
-                @endforelse
-            </div>
-        </section>
+                <!-- Title -->
+                <h3 class="text-lg sm:text-xl font-bold mb-2 text-black group-hover:text-white transition">
+                    {{ $service->title }}
+                </h3>
+
+                <!-- Description with fixed height & ellipsis -->
+                <p class="text-gray-800 group-hover:text-white transition mb-4 line-clamp-3">
+                    {{ $service->description }}
+                </p>
+
+                <!-- Optional button -->
+                <span class="mt-auto text-sm font-semibold text-blue-700 group-hover:text-white transition">
+                    View More
+                </span>
+            </a>
+        @empty
+            <p class="col-span-3 text-center text-gray-500">No services created yet.</p>
+        @endforelse
+    </div>
+</section>
+
+<style>
+/* Optional: line clamp for descriptions */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+.service-icon {
+    filter: none;
+    transition: filter 0.3s ease;
+}
+.group:hover .service-icon {
+    filter: brightness(0) invert(1);
+}
+</style>
+
 
     </main>
 </div>

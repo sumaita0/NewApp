@@ -61,6 +61,42 @@ class AdminController extends Controller
         return redirect()->route('services.index')->with('success', 'Service added successfully!');
     }
 
+    // Show Edit Service Form
+    public function editService($id)
+    {
+        $service = Service::findOrFail($id);
+        return view('services.edit', compact('service'));
+    }
+    // Update Service
+public function updateService(Request $request, $id)
+{
+    $service = Service::findOrFail($id);
+
+    $request->validate([
+        'title' => 'required|string|max:255',
+        'description' => 'nullable|string',
+        'icon' => 'nullable|image|mimes:jpg,png,svg|max:2048',
+        'is_active' => 'nullable|boolean'
+    ]);
+
+    $service->title = $request->title;
+    $service->slug = Str::slug($request->title);
+    $service->description = $request->description;
+    $service->is_active = $request->is_active ?? 1;
+
+    if ($request->hasFile('icon')) {
+        $file = $request->file('icon');
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('images'), $filename);
+        $service->icon = $filename;
+    }
+
+    $service->save();
+
+    return redirect()->route('services.index')
+        ->with('success', 'Service updated successfully!');
+}
+
     // Delete service
     public function deleteService($id)
     {
@@ -80,7 +116,7 @@ class AdminController extends Controller
                 }])
                 ->firstOrFail();
 
-            return view('service1', compact('service'));
+            return view('services.show', compact('service'));
         }
 
     // List all sub-services
@@ -90,6 +126,52 @@ class AdminController extends Controller
         $subServices = Sub_Service::all();
         return view('subservices.index', compact('services', 'subServices'));
     }
+
+    // Show Edit Sub-Service Form
+public function editSubService($id)
+{
+    $subService = Sub_Service::findOrFail($id);
+    $services = Service::all();
+
+    return view('subservices.edit', compact('subService', 'services'));
+}
+
+// Update Sub-Service
+public function updateSubService(Request $request, $id)
+{
+    $subService = Sub_Service::findOrFail($id);
+
+    $request->validate([
+        'service_id' => 'required|exists:services,id',
+        'title' => 'required|string|max:255',
+        'description' => 'nullable|string',
+        'icon' => 'nullable|image|mimes:jpg,png,svg|max:2048',
+        'price' => 'nullable|numeric',
+        'discount_price' => 'nullable|numeric',
+        'quantity' => 'nullable|integer',
+        'is_active' => 'nullable|boolean'
+    ]);
+
+    $subService->service_id = $request->service_id;
+    $subService->title = $request->title;
+    $subService->description = $request->description;
+    $subService->price = $request->price;
+    $subService->discount_price = $request->discount_price;
+    $subService->quantity = $request->quantity ?? 0;
+    $subService->is_active = $request->is_active ?? 1;
+
+    if ($request->hasFile('icon')) {
+        $file = $request->file('icon');
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('images'), $filename);
+        $subService->icon = $filename;
+    }
+
+    $subService->save();
+
+    return redirect()->route('subservices.index')
+        ->with('success', 'Sub-Service updated successfully!');
+}
 
     // Show single sub-service
         public function showSubService($id)
